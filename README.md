@@ -1,70 +1,81 @@
-# 💰 Kaun Banega Crorepati – C Language Edition 💰
-"Lock kiya jaaye?" – A C-powered quiz experience inspired by India’s favorite game show!
+ Overview
+This project is a simple command-line simulation of the popular Indian quiz show, Kaun Banega Crorepati. The game presents players with multiple-choice questions, and for each correct answer, they win a certain amount of virtual money, progressing up the prize ladder.
 
-## 🎬 Project Overview
-This project is a console-based recreation of *Kaun Banega Crorepati (KBC)* designed entirely in *C programming language*.  
-It simulates the quiz experience where players answer multiple-choice questions, earn money for correct answers, and can use lifelines — just like the real show!
+The core of the project utilizes fundamental C programming concepts, including:
 
-Built as a fun and educational exercise, this program demonstrates logical flow control, structured programming, file handling, and user interaction in C.
+File Handling: To store and load questions, options, and answers.
 
----
+Arrays/Structs: To manage the question data efficiently.
 
-## ⚙ Features
-- 🧠 *Multiple Choice Questions (MCQ)* format.  
-- 💸 *Incremental prize system* — from ₹1,000 to ₹1 Crore!  
-- 🆘 *Lifelines implemented* (Audience Poll, 50-50, Expert Advice).  
-- 💾 *Score saving* using file handling (records player’s name and winnings).  
-- 🎨 *Colorful console output* for enhanced user experience (if supported).  
-- 🎯 *Error handling* and input validation for smooth gameplay.
+Control Structures (Loops and Conditionals): To handle game flow, question display, and answer validation.
 
----
+ Key Features
+Prize Ladder: A pre-defined structure of prize money for each question.
 
-## 🧩 Technologies Used
-| Component | Description |
-|------------|--------------|
-| *Language* | C (ANSI standard) |
-| *Compiler* | GCC / Turbo C / Code::Blocks |
-| *Concepts Used* | Loops, conditionals, arrays, structs, functions, file handling |
+Question Bank: Stores multiple-choice questions with four options and one correct answer.
 
----
+Lifelines (Basic Implementation): A simplified version of lifelines (e.g., 50:50).
 
-## 🏆 Prize Structure
-| Question | Reward (₹) |
-|-----------|-------------|
-| 1 | 1,000 |
-| 2 | 2,000 |
-| 3 | 5,000 |
-| 4 | 10,000 |
-| 5 | 20,000 |
-| 6 | 40,000 |
-| 7 | 80,000 |
-| 8 | 1,60,000 |
-| 9 | 3,20,000 |
-| 10 | 6,40,000 |
-| 11 | 12,50,000 |
-| 12 | 25,00,000 |
-| 13 | 50,00,000 |
-| 14 | 1 CRORE 🏆 |
+Game Persistence (Optional): Can be extended to save high scores.
 
----
+ Prerequisites
+To compile and run this C program, you will need:
 
-## 💡 Future Enhancements
-- Add *sound effects* for correct/wrong answers.  
-- Build a *GUI version* using C graphics or GTK.  
-- Introduce *timed questions* for more challenge.  
-- Implement *database support* for player history.
+A C Compiler: Such as GCC (GNU Compiler Collection).
 
----
+A Text Editor or IDE: For editing the source code (e.g., VS Code, Code::Blocks, or any basic text editor).
 
-## 👨‍💻 Author
-B.Siva Shasank
-B.Tech in Computer Science  
-A passionate learner exploring logic through C!  
+ Installation and Execution
+Follow these steps to get the game running on your local machine:
 
-📧 Email: yourname@email.com  
-🌐 GitHub: [github.com/yourusername](#)  
+1. Clone or Download the Project
+Make sure you have all the source code files (e.g., kbc.c, questions.txt, etc., if applicable) in a single directory.
 
----
+2. Compilation (Using GCC)
+Open your terminal or command prompt, navigate to the project directory, and compile the source file(s) using the GCC compiler:
 
-## 🏁 “Computer ji, final answer lock kiya jaaye?”  
-Press any key to continue your coding journey… 🚀
+Bash
+
+gcc kbc.c -o kbc_game
+Note: kbc.c is the primary source file, and -o kbc_game creates the executable file named kbc_game.
+
+3. Execution
+Run the compiled executable from the terminal:
+
+Bash
+
+./kbc_game
+or (on Windows)
+
+Bash
+
+kbc_game.exe
+ How to Play
+The game will start and display the first question and the four options (A, B, C, D).
+
+Read the question carefully.
+
+Enter the letter corresponding to your chosen answer (e.g., A, B, C, or D).
+
+The program will inform you if your answer is correct or incorrect and update your winnings.
+
+If correct, you proceed to the next question. If incorrect, the game ends, and your final winnings are displayed.
+
+ Project Structure (Example)
+A typical project structure for this game might look like this:
+
+kbc-project/
+├── kbc.c             # Main source code file
+├── questions.txt     # File containing the list of questions and answers
+└── README.md         # This file
+ Contribution
+This project is a great starting point for learning C! Feel free to:
+
+Add more questions to the question bank.
+
+Implement more lifelines (e.g., Audience Poll, Phone-a-Friend).
+
+Enhance the User Interface (e.g., clearer text formatting, better presentation).
+
+ Author
+Your Name B.Siva Shasank
